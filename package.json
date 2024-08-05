@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install-server": "cd backend && npm install",
     "start-server": "cd backend && node index.js",
-    "install-client": "cd frontend/stramerfe && npm install",
+    "install-client": "cd frontend/streamerfe && npm install",
     "build-client": "cd frontend/streamerfe && npm run build",
     "start-client": "cd frontend/streamerfe && npm run start"
   },
