@@ -29,7 +29,7 @@ function App() {
 
   const fetchVideos = async () => {
     try {
-      const response = await axios.get("http://localhost:10000/videos");
+      const response = await axios.get("https://vidtoast.onrender.com/videos");
       setVideos(response.data);
       if (response.data.length > 0) {
         setMainVideo(response.data[0]);
@@ -43,7 +43,7 @@ function App() {
   const incrementLikes = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:10000/video/${mainVideo._id}/like`
+        `https://vidtoast.onrender.com/video/${mainVideo._id}/like`
       );
       setLikes(response.data.likes);
     } catch (error) {
@@ -71,7 +71,7 @@ function App() {
     formData.append("video", selectedFile);
 
     try {
-      await axios.post("http://localhost:10000/upload", formData, {
+      await axios.post("https://vidtoast.onrender.com/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setUploadMessage("File uploaded successfully!");
@@ -117,7 +117,7 @@ function App() {
           {mainVideo ? (
             <>
               <ReactPlayer
-                url={`http://localhost:10000/video/${mainVideo.filename}`}
+                url={`https://vidtoast.onrender.com/video/${mainVideo.filename}`}
                 controls
                 width="100%"
                 height="100%"
@@ -146,7 +146,7 @@ function App() {
             >
               <Card.Img
                 variant="top"
-                src={`http://localhost:10000/${video.thumbnail}`}
+                src={`https://vidtoast.onrender.com/${video.thumbnail}`}
                 alt={video.filename}
               />
               <Card.Body>
