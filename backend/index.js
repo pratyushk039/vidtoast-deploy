@@ -35,8 +35,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Upload Video Endpoint
-app.post('/upload', upload.single('video'), async (req, res) => {
-  const videoFile = req.file;
+app.post('/upload', upload.any(), async (req, res) => {
+  const videoFile = req.files[0];
 
   if (!videoFile) {
     return res.status(400).send('No file uploaded.');
