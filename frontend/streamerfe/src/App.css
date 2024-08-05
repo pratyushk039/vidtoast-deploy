@@ -1,0 +1,65 @@
+/* App.css */
+
+.App {
+  background-color: #000;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.video-player-container {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #111;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 70%;
+}
+
+@media (max-width: 768px) {
+  .video-player-container {
+    max-width: 90%;
+  }
+}
+
+.card {
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+  border: 1px solid #555;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  border-radius: 10px 10px 0 0;
+  height: 180px;
+  object-fit: cover;
+}
+
+.navbar {
+  background: linear-gradient(to right, black, purple, black);
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.fa-bars {
+  color: white;
+}
+
+button {
+  margin-top: 15px;
+}
+
+.like-button {
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
