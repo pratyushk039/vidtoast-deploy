@@ -9,12 +9,12 @@ const Video = require('./VideoModel'); // Import Video model
 const connectDB = require('./db'); // Import database connection
 const app = express();
 const cors = require('cors')
+require("dotenv").config();
 
-const port = 8000;
+const port = process.env.PORT;
 
 app.use(express.json()); // Middleware to parse JSON
 app.use(cors())
-require("dotenv").config();
 
 app.use('/uploads', express.static('uploads'));
 
